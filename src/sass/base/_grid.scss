@@ -51,17 +51,37 @@ $grid-gutter-width: 40px;
 
 }
 
+@mixin push($size, $columns: 12) {
+    @for $index from 1 through $columns {
+        .#{$grid-prefix}#{$size}-push-#{$index} {
+            left: percentage(($index / $columns));
+        }
+    }
+}
+
+@mixin pull($size, $columns: 12) {
+    @for $index from 1 through $columns {
+        .#{$grid-prefix}#{$size}-pull-#{$index} {
+            right: percentage(($index / $columns));
+        }
+    }
+}
+
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 
     @if $breakpoint-name == "xs" {
 
         @include grid($breakpoint-name, $grid-columns);
+        @include push($breakpoint-name, $grid-columns);
+        @include pull($breakpoint-name, $grid-columns);
 
     } @else {
 
         @include media($breakpoint-size) {
 
             @include grid($breakpoint-name, $grid-columns);
+            @include push($breakpoint-name, $grid-columns);
+            @include pull($breakpoint-name, $grid-columns);
 
         }
     }
