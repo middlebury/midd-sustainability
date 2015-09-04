@@ -12,6 +12,8 @@ var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
 var cp = require('child_process');
 
+var env = gutil.env.type || 'development';
+
 // Custom error handler from
 // https://github.com/mikaelbr/gulp-notify/issues/81#issuecomment-100422179
 var reportError = function (error) {
@@ -76,6 +78,8 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(autoprefixer('last 2 versions'))
+        .pipe(env === 'production' ? cmq() : gutil.noop())
+        .pipe(env === 'production' ? minifyCss() : gutil.noop())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.reload({ stream: true }))
@@ -88,7 +92,7 @@ gulp.task('js', function() {
             errorHandler: reportError
         }))
         .pipe(sourcemaps.init())
-        .pipe(uglify())
+        .pipe(env === 'production' ? uglify() : gutil.noop())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.reload({ stream: true }))
