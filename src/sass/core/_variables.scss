@@ -1,16 +1,18 @@
 
 // Media sizes
 
-$screen-xs: em(480);
-$screen-sm: em(768);
-$screen-md: em(1024);
-$screen-lg: em(1440);
+$screen-xs: 0;
+$screen-sm: em(480);
+$screen-md: em(768);
+$screen-lg: em(992);
+$screen-xl: em(1200);
 
 $breakpoints: (
-    'xs': $screen-xs,
-    'sm': $screen-sm,
-    'md': $screen-md,
-    'lg': $screen-lg,
+    xs: 0,
+    sm: $screen-sm,
+    md: $screen-md,
+    lg: $screen-lg,
+    xl: $screen-xl
 );
 
 // Font families

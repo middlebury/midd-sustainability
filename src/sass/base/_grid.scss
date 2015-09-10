@@ -1,12 +1,10 @@
 $grid-prefix: 'col' !default;
 $grid-columns: 12;
-$grid-gutter-width: 40px;
+$grid-gutter-width: 30px;
 
 @if ($grid-prefix != '') {
     $grid-prefix: "#{$grid-prefix}-";
 }
-
-
 
 %container {
     margin-left: auto;
@@ -16,7 +14,7 @@ $grid-gutter-width: 40px;
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1170px;
     @extend %container;
 }
 

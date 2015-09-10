@@ -47,13 +47,13 @@
         letter-spacing: .1em;
         margin-bottom: 10px;
 
-        @include media(xs) {
+        @include media(sm) {
             float: left;
             width: 50%;
             padding: 10px;
         }
 
-        @include media(sm) {
+        @include media(md) {
             text-align: center;
             width: percentage(1 / 7);
         }
@@ -68,7 +68,7 @@
     vertical-align: middle;
     margin-bottom: 10px;
 
-    @include media(sm) {
+    @include media(md) {
         float: none;
         width: 100px;
         margin-right: auto;
