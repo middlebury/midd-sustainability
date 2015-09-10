@@ -15,6 +15,12 @@
 // Components
 @import 'components/navs';
 @import 'components/buttons';
+@import 'components/media';
+@import 'components/lists';
+@import 'components/hr';
+@import 'components/slideshow';
+@import 'components/leaf';
+@import 'components/calendar-date';
 
 // Layout
 @import 'layout/header';
@@ -27,9 +33,11 @@
 @import 'helpers/padding';
 @import 'helpers/text-align';
 @import 'helpers/background';
+@import 'helpers/floats';
 @import 'helpers/color';
 @import 'helpers/hide';
 @import 'helpers/show';
+@import 'helpers/shadow';
 
 $DEBUG: false;
 
