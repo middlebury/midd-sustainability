@@ -45,3 +45,20 @@ hr {
 textarea {
     resize: vertical;
 }
+
+h1,
+h2 {
+    color: $brand-primary;
+    font-family: $font-family-serif;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: .2em;
+}
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-sans-serif;
+    margin-top: 0;
+    margin-bottom: .1em;
+}
