@@ -24,3 +24,10 @@
          }
     }
 }
+
+.list-border-separated {
+    li:not(:first-child) {
+        border-left: 2px solid #a3abb9;
+        padding-left: 11px;
+    }
+}
