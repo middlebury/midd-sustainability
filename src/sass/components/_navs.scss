@@ -1,35 +1,19 @@
 .nav-list {
     @include clearfix();
+    list-style: none;
     margin-top: 0;
     margin-bottom: 20px;
     padding-left: 0;
 }
 
 .nav-list-item {
-    list-style: none;
+    // margin-bottom: 10px;
 
-    @include media(md) {
-        float: left;
-    }
-}
-
-.nav-list-anchor {
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: block;
-
-    &:focus,
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-.nav-list-header {
-
-    .nav-list-item {
+    .global-header & {
+        // margin-bottom: 0;
 
         @include media(md) {
+            float: left;
 
             &:not(:first-child) {
                 margin-left: 20px;
@@ -38,15 +22,29 @@
             }
 
         }
-
     }
 
+    .footer-nav & {
+        margin-bottom: 10px;
+    }
 }
 
-.nav-list-tags {
+.nav-list-anchor {
 
-    .nav-list-item {
+    // modifications for when item is in global header
+    .global-header & {
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: block;
+    }
+
+    // modifications for when nav list is nav-list-tags
+    .nav-list-tags & {
         @include clearfix();
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .1em;
         margin-bottom: 10px;
 
         @include media(xs) {
