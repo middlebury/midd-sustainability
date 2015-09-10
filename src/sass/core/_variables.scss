@@ -33,9 +33,9 @@ $brand-secondary: #c0ffee;
 $brand-secondary-dark: darken($brand-secondary, 10%);
 
 $gray-base: #000;
-$gray-light: lighten($gray-base, 20%);
-$gray-lighter: lighten($gray-base, 30%);
-$gray: lighten($gray-base, 10%);
+$gray-light: #ecebe9;
+$gray-lighter: #f5f5f5;
+$gray: #7b7b7b;
 $gray-dark: darken($gray-base, 10%);
 $gray-darker: darken($gray-base, 10%);
 
