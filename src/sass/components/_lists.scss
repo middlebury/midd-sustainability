@@ -12,7 +12,7 @@
 .list-inline {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0;
+    padding-left: 0;
     display: inline-block;
 
     li {
@@ -20,7 +20,14 @@
         display: inline-block;
 
          & + li {
-             margin-left: 20px;
+             margin-left: 10px;
          }
+    }
+}
+
+.list-border-separated {
+    li:not(:first-child) {
+        border-left: 2px solid #a3abb9;
+        padding-left: 11px;
     }
 }
