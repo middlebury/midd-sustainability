@@ -7,7 +7,37 @@
 }
 
 @mixin media($screen-size) {
-    @media only screen and (min-width: $screen-size) {
-        @content;
+
+    $size: '';
+
+    @if(type-of($screen-size) == 'string') {
+        $size: to-lower-case($screen-size);
+    }
+
+    // TODO: redo this by just looping through $breakpoints and checking against breakpoint key
+    @if $size == 'xs' {
+        @media only screen and (min-width: $screen-xs) {
+            @content;
+        }
+    }
+    @else if $size == 'sm' {
+        @media only screen and (min-width: $screen-sm) {
+            @content;
+        }
+    }
+    @else if $size == 'md' {
+        @media only screen and (min-width: $screen-md) {
+            @content;
+        }
+    }
+    @else if $size == 'lg' {
+        @media only screen and (min-width: $screen-lg) {
+            @content;
+        }
+    }
+    @else {
+        @media only screen and (min-width: $screen-size) {
+            @content;
+        }
     }
 }
