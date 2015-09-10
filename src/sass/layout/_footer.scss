@@ -1,0 +1,14 @@
+.global-footer {
+    color: #a3abb8;
+    background-color: $brand-primary;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    a {
+        color: #a3abb8;
+    }
+
+    .list-inline li {
+        vertical-align: middle;
+    }
+}

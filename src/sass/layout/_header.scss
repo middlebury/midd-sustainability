@@ -1,0 +1,12 @@
+.global-header {
+    background-color: $brand-primary;
+    margin-bottom: 40px;
+    height: 80px;
+}
+
+.global-header-title {
+    font-weight: normal;
+    font-family: $font-family-serif;
+    color: $brand-primary;
+    margin-bottom: 20px;
+}

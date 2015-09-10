@@ -1,0 +1,26 @@
+.list-unstyled {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+        list-style-type: none;
+        margin-bottom: 10px;
+    }
+}
+
+.list-inline {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    display: inline-block;
+
+    li {
+        list-style: none;
+        display: inline-block;
+
+         & + li {
+             margin-left: 20px;
+         }
+    }
+}
