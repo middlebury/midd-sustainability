@@ -25,6 +25,12 @@ a {
         color: $link-color-hover;
         text-decoration: underline;
     }
+
+    &[href^='tel:'] {
+        color: inherit;
+    }
+}
+
 p {
     line-height: 1.6;
     margin-top: 0;
