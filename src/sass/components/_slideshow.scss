@@ -1,0 +1,99 @@
+
+$slide-breakpoint: 'md';
+
+.cycle-slideshow {
+    // margin-bottom: 50px;
+}
+
+.cycle-next,
+.cycle-prev {
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    transform: translateY(-50%);
+    z-index: 200;
+
+    @include media($slide-breakpoint) {
+        border-radius: 10px;
+    }
+
+}
+
+.cycle-next {
+    right: 0;
+
+    @include media($slide-breakpoint) {
+        right: -20px;
+    }
+}
+
+.cycle-prev {
+    left: 0;
+
+    @include media($slide-breakpoint) {
+        left: -20px;
+    }
+}
+
+.cycle-pager {
+    text-align: center;
+    padding: 10px 0;
+
+    @include media($slide-breakpoint) {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+    }
+
+    a {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $brand-primary-lightest;
+        margin-left: 5px;
+        margin-right: 5px;
+        transition: background-color .2s ease-in-out;
+    }
+}
+
+a.cycle-pager-active {
+    background-color: $brand-primary;
+}
+
+.cycle-caption {
+    text-align: center;
+
+    h2 {
+        color: $brand-primary;
+        font-size: 24px;
+    }
+
+    p {
+        color: $brand-primary-light;
+        font-size: 18px;
+    }
+}
+
+.cycle-slides {
+
+}
+
+.cycle-controls {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @include media($slide-breakpoint) {
+        background-color: $white;
+        border-radius: 50%;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        right: 10%;
+        top: 50px;
+        padding: 125px 100px;
+        z-index: 300;
+    }
+}
