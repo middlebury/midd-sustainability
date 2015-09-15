@@ -9,6 +9,7 @@
 
 // Base styles
 @import 'base/global';
+@import 'base/content';
 @import 'base/grid';
 // @import 'base/print';
 
@@ -19,9 +20,13 @@
 @import 'components/lists';
 @import 'components/hr';
 @import 'components/slideshow';
+@import 'components/pager';
+@import 'components/breadcrumbs';
 // @import 'components/leaf';
 @import 'components/calendar-date';
+@import 'components/img';
 @import 'components/icons';
+@import 'components/tags';
 
 // Layout
 @import 'layout/header';
