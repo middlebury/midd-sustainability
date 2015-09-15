@@ -70,7 +70,7 @@
 
     .pager-first {
         display: none;
-        
+
         @include media(sm) {
             display: table-cell;
         }
@@ -78,7 +78,7 @@
 
     .pager-last {
         display: none;
-        
+
         @include media(sm) {
             display: table-cell;
         }
