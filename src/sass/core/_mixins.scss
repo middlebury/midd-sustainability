@@ -15,10 +15,10 @@
     }
 
     // TODO: redo this by just looping through $breakpoints and checking against breakpoint key
-    @if $size == 'xs' {
-        @media only screen and (min-width: $screen-xs) {
+    @if $size == 'xs' or $screen-size == 0 {
+        // @media only screen and (min-width: $screen-xs) {
             @content;
-        }
+        // }
     }
     @else if $size == 'sm' {
         @media only screen and (min-width: $screen-sm) {
