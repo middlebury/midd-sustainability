@@ -47,14 +47,16 @@
     .pager-current {
         color: $gray;
         padding: 5px 10px;
-        // background-color: $gray-lighter;
+        background-color: $gray-lighter;
+        border-radius: 24px;
         font-size: 14px;
     }
 
     .pager-ellipsis {
         color: $gray;
         padding: 5px 10px;
-        // background-color: $gray-lighter;
+        background-color: $gray-lighter;
+        border-radius: 24px;
         font-size: 14px;
         display: none;
 
