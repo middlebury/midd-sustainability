@@ -1,0 +1,33 @@
+$breadcrumb-gutter: 5px;
+$breadcrumb-link-color: #96A2B1;
+
+.breadcrumbs {
+    @include clearfix();
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+
+    li {
+        list-style: none;
+        float: left;
+
+        &:not(:first-child) {
+            margin-left: $breadcrumb-gutter * 2;
+
+            &:before {
+                content: '/';
+                color: $breadcrumb-link-color;
+                position: relative;
+                right: $breadcrumb-gutter;
+                top: 1px;
+                margin-left: $breadcrumb-gutter;
+            }
+        }
+
+        a {
+            color: $breadcrumb-link-color;
+            font-size: 14px;
+            text-shadow: 1px 1px 0 $white, -1px -1px 0 $white;
+        }
+    }
+}
