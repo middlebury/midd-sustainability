@@ -62,7 +62,7 @@ gulp.task('img', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src('./src/sass/main.scss')
+    return gulp.src('./src/sass/*.scss')
         // .pipe(watch('_scss/**/*.scss'))
         .pipe(plumber({
             errorHandler: reportError
