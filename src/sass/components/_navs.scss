@@ -100,8 +100,10 @@ ul.menu li {
 }
 
 // TODO: gag
-.widget-nav > .nav-list {
+.widget-nav > .menu {
     box-shadow: 0 0 5px rgba(black, .25);
+    padding: 0;
+    margin: 0;
 
     > li {
 
