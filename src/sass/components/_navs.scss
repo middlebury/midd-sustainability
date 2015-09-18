@@ -7,6 +7,17 @@ ul.menu li {
     padding-right: 0;
 }
 
+.item-list {
+    ul {
+        li {
+            margin-left: inherit;
+            margin-bottom: inherit;
+        }
+    }
+}
+
+// end overwrites
+
 .nav-list {
     @include clearfix();
     list-style: none;
