@@ -1,15 +1,13 @@
-.color-white {
-    color: $white;
-}
+$color-helpers: (
+    'white': $white,
+    'primary': $brand-primary,
+    'primary-light': $brand-primary-light,
+    'gray': $gray,
+    'gray-light': $gray-light
+);
 
-.color-primary {
-    color: $brand-primary;
-}
-
-.color-primary-light {
-    color: $brand-primary-light;
-}
-
-.color-gray {
-    color: $gray;
+@each $name, $color in $color-helpers {
+    .color-#{$name} {
+        color: $color
+    }
 }
