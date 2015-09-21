@@ -10,7 +10,7 @@ var uglify = require('gulp-uglify');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
-var cp = require('child_process');
+var del = require('del');
 
 var env = gutil.env.type || 'development';
 
@@ -49,6 +49,10 @@ gulp.task('browser-sync', ['img', 'html', 'js', 'sass'], function() {
         }
     });
 });
+
+gulp.task('clean', function() {
+    return del(['dist']);
+})
 
 gulp.task('html', function() {
     return gulp.src('./src/*.html')
@@ -99,4 +103,4 @@ gulp.task('watch', function() {
     gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['clean', 'browser-sync', 'watch']);
