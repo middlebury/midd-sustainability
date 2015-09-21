@@ -51,8 +51,8 @@ gulp.task('browser-sync', ['img', 'html', 'js', 'sass'], function() {
 });
 
 gulp.task('clean', function() {
-    return del(['dist']);
-})
+    return del('./dist/**/*.*');
+});
 
 gulp.task('html', function() {
     return gulp.src('./src/*.html')
