@@ -57,8 +57,9 @@ gulp.task('html', function() {
 });
 
 gulp.task('img', function() {
-    return gulp.src(['./src/img/*.jpg', './src/img/*.png'])
-        .pipe(gulp.dest('./dist/img'));
+    return gulp.src(['./src/images/**/*'])
+        .pipe(imagemin())
+        .pipe(gulp.dest('./dist/images'));
 });
 
 gulp.task('sass', function() {
