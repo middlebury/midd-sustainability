@@ -24,9 +24,19 @@ $breadcrumb-link-color: #96A2B1;
         &:not(:first-child) {
             margin-left: $breadcrumb-gutter * 2;
 
-            a {
+            &:before {
+                content: '/';
                 color: $breadcrumb-link-color;
+                position: relative;
+                right: $breadcrumb-gutter;
+                top: 1px;
+                margin-left: $breadcrumb-gutter;
             }
         }
+
+        a {
+            color: $breadcrumb-link-color;
+        }
     }
+
 }
