@@ -43,14 +43,15 @@
             border: 1px solid $gray-lighter;
             padding: 5px;
         }
-    }
 
-    img[align='left'] {
-        margin-right: 20px;
-    }
-
-    img[align='right'] {
-        margin-left: 20px;
+        // 767px is $screen-md - 1px
+        // can't use variable since it's in em unit
+        @media (max-width: 767px) {
+            & {
+                float: none !important;
+                margin: 20px 0 !important;
+            }
+        }
     }
 
     hr {
