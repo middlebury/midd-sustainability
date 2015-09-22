@@ -102,6 +102,11 @@
                 left: -20px;
             }
         }
+
+        ul {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
     }
 
     $counter-size: 20px;
@@ -110,11 +115,11 @@
         margin-top: 0;
         margin-bottom: 40px;
 
-        li {
+        > li {
             color: #606E7D;
             list-style: none;
             counter-increment: step-counter;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             position: relative;
 
             &:before {
@@ -132,6 +137,12 @@
                 left:  -(8px + $counter-size);
                 top: 2px;
             }
+        }
+
+        ol {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            counter-reset: step-counter;
         }
     }
 
