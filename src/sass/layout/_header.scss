@@ -15,8 +15,18 @@
 }
 
 .global-header-title {
-    font-weight: normal;
-    font-family: $font-family-serif;
     color: $brand-primary;
+    font-family: $font-family-serif;
+    font-size: 18px;
+    font-weight: normal;
     margin-bottom: 20px;
+
+    @include media(sm) {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    @include media(md) {
+        font-size: 36px;
+    }
 }
