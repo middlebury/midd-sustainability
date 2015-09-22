@@ -38,6 +38,7 @@
     img {
         margin-bottom: 20px;
 
+        // TODO: sort of hacky way to prevent featured image to have 'thumbnail' style
         &:not(:first-child) {
             background-color: $white;
             border: 1px solid $gray-lighter;
