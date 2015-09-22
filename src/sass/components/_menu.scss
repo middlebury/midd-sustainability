@@ -1,0 +1,77 @@
+.menu-btn {
+    display: inline-block;
+    color: $brand-secondary;
+    border: 1px solid $brand-secondary;
+    border-radius: 5px;
+    white-space: nowrap;
+    padding: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+
+    @include media(lg) {
+        display: none;
+    }
+}
+
+#menu-handler {
+    display: none;
+}
+
+.global-nav {
+    display: none;
+    padding: 10px;
+    background-color: $gray-lighter;
+    position: relative;
+    top: 10px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent $gray-lighter transparent;
+        bottom: 100%;
+        right: 30px;
+    }
+
+    #menu-handler:checked ~ & {
+        display: block;
+    }
+
+    ul {
+        margin-bottom: 0;
+    }
+
+    li {
+        margin-bottom: 10px;
+        padding-top: 10px;
+
+        &:not(:first-child) {
+            border-top: 1px solid $gray-light;
+        }
+    }
+
+    @include media(lg) {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+
+        &:before {
+            display: none;
+        }
+
+        ul {
+
+        }
+
+        li {
+            margin-top: 0;
+            margin-bottom: 0;
+            border-top: 0 !important;
+            padding-top: 0;
+        }
+    }
+}
