@@ -42,13 +42,20 @@ ul.menu li {
 
 .global-header {
     .nav-list-item {
-        @include media(md) {
+        @include media(lg) {
             float: left;
 
             &:not(:first-child) {
-                margin-left: 20px;
-                padding-left: 22px;
+                margin-left: 10px;
+                padding-left: 12px;
                 border-left: 2px solid $header-nav-rail;
+            }
+        }
+
+        @include media(xl) {
+            &:not(:first-child) {
+                margin-left: 15px;
+                padding-left: 17px;
             }
         }
     }
@@ -58,6 +65,14 @@ ul.menu li {
         text-transform: uppercase;
         letter-spacing: 1px;
         display: block;
+
+        @include media(lg) {
+            font-size: 14px;
+        }
+
+        @include media(xl) {
+            font-size: 16px;
+        }
     }
 }
 
