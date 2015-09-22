@@ -169,4 +169,18 @@
             border: 1px solid $gray-light;
         }
     }
+
+    dl {
+        color: $content-color;
+    }
+
+    dt {
+        // margin-top: 5px;
+        margin-bottom: 10px;
+    }
+
+    dd {
+        // margin-top: 5px;
+        margin-bottom: 10px;
+    }
 }
