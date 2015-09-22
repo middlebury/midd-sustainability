@@ -2,6 +2,10 @@ $breadcrumb-gutter: 5px;
 $breadcrumb-link-color: #96A2B1;
 
 .breadcrumbs {
+    @include clearfix();
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
 
     .first > a {
         background-image: url('../images/sustainability/icon-home.svg');
@@ -11,11 +15,6 @@ $breadcrumb-link-color: #96A2B1;
         display: inline-block;
         text-indent: -99999px;
     }
-
-    @include clearfix();
-    margin-bottom: 0;
-    margin-top: 0;
-    padding-left: 0;
 
     li {
         list-style: none;
