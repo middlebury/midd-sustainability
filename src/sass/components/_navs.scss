@@ -153,12 +153,12 @@ ul.menu li {
                     color: $brand-primary-light;
                 }
 
-                > ul {
+                ul {
                     padding-left: 20px;
                     margin-top: 5px;
                     margin-bottom: 0;
 
-                    > li {
+                    li {
                         padding-top: 3px;
                         padding-bottom: 3px;
 
@@ -176,6 +176,11 @@ ul.menu li {
                                     position: absolute;
                                 }
                             }
+                        }
+
+                        // 4rd level nest
+                        ul li a {
+                            color: $gray;
                         }
                     }
                 }
