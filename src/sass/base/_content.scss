@@ -11,9 +11,12 @@
         margin-bottom: 1.2em;
     }
 
-    h1:first-of-type {
-        margin-top: 0;
-        margin-bottom: .5em;
+    h1,
+    h2 {
+        &:first-of-type {
+            margin-top: 0;
+            margin-bottom: .5em;
+        }
     }
 
     h2,
