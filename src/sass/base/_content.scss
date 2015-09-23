@@ -192,4 +192,22 @@
         padding: 0;
     }
 }
+
+// TODO: add same class for events listing if that page has individual classes
+.node-newslist {
+    h2 {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    .tags {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        li {
+            &:before {
+                display: none;
+            }
+        }
+    }
 }
