@@ -79,11 +79,8 @@ ul.menu li {
 
 // tags (icons) list nav
 .nav-list-tags {
-    .nav-list-anchor {
-        @include clearfix();
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: .1em;
+
+    .nav-list-item {
         margin-bottom: 10px;
 
         body:not(.midd_sustainability_inside) & {
@@ -94,11 +91,18 @@ ul.menu li {
                 padding: 10px;
             }
 
-            @include media(md) {
+            @include media(lg) {
                 text-align: center;
-                width: percentage(1 / 7);
+                width: percentage(1 / 6);
             }
         }
+    }
+
+    .nav-list-anchor {
+        @include clearfix();
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .1em;
     }
 }
 
@@ -112,7 +116,7 @@ ul.menu li {
 
     body:not(.midd_sustainability_inside) & {
 
-        @include media(md) {
+        @include media(lg) {
             float: none;
             width: 100px;
             margin-right: auto;
