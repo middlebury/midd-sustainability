@@ -65,6 +65,7 @@ ul.menu li {
         text-transform: uppercase;
         letter-spacing: 1px;
         display: block;
+        color: $brand-secondary;
 
         @include media(lg) {
             font-size: 14px;
@@ -128,6 +129,10 @@ ul.menu li {
 .footer-nav {
     .nav-list-item {
         margin-bottom: 10px;
+    }
+
+    .nav-list-anchor {
+        color: $brand-secondary;
     }
 }
 
