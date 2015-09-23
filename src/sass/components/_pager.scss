@@ -3,19 +3,22 @@
     padding-left: 0;
     margin-top: 0;
     display: table;
-
-    @include media(md) {
-
-    }
+    line-height: 1.6 !important; // overwrite system.theme
 
     li {
         list-style: none;
-        display: table-cell;
+        display: table-cell !important; // overwrite system.theme: !important not needed, but table-cell is
         width: 1%;
         white-space: nowrap;
         text-align: center;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 0 5px !important; // overwrite system.theme: important to remove top/btm padding but l/r padding should stay
+        font-weight: normal !important; // overwrite system.theme
+
+        // ugly override from .contents styles
+        // currently pager cannot be outside of .contents in drupal
+        &:before {
+            display: none;
+        }
 
         a {
             display: block;
@@ -32,10 +35,6 @@
                 background-color: $brand-secondary;
                 color: $white;
             }
-        }
-
-        @include media(md) {
-
         }
     }
 
