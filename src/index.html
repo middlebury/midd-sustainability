@@ -11,13 +11,21 @@
 </head>
 <body>
     <header class="global-header">
-        <div class="global-header-branding mb1">
+        <div class="global-header-branding">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12">
-                        <a href="">
-                            <!-- <img src="./images/sustainability/middlebury-shield.png" alt="" class="global-header-logo"> -->
+                    <div class="col-xs-12 col-md-8">
+                        <a href="http://www.middlebury.edu">
+                            <img src="./images/sustainability/middlebury-shield.png" alt="" class="global-header-logo">
+                            <img src="./images/sustainability/middlebury-wordmark.png" alt="" class="global-header-wordmark">
                         </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4 text-right">
+                        <form class="show-md-up">
+                            <label for="search" class="visuallyhidden">Search</label>
+                            <input type="search" name="search" id="search" placeholder="Search Middlebury.edu...">
+                            <input type="submit" class="visuallyhidden">
+                        </form>
                     </div>
                 </div>
             </div>
@@ -25,17 +33,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-8 col-sm-9 col-lg-12">
-                    <h1 class="global-header-title">Sustainability at Middlebury</h1>
+                    <h1 class="global-header-title"><a href="#">Sustainability</a></h1>
                 </div>
                 <div class="col-xs-4 col-sm-3 col-lg-12 text-right">
-                    <label for="menu-handler" class="menu-btn">Menu &#9776;</label>
+                    <label for="menu-handler" class="menu-btn" title="Toggle menu">Menu &#9776;</label>
                 </div>
                 <div class="col-xs-12">
                     <input type="checkbox" id="menu-handler" aria-hidden="true">
-                    <nav class="global-nav mb1">
+                    <nav class="global-nav">
                         <ul class="nav-list">
-                            <li class="nav-list-item">
-                                <a href="#" class="nav-list-anchor">Our Commitment</a>
+                            <li class="nav-list-item active-trail">
+                                <a href="#" class="nav-list-anchor active">Our Commitment</a>
                             </li>
                             <li class="nav-list-item">
                                 <a href="#" class="nav-list-anchor">Academics and Research</a>

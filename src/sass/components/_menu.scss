@@ -19,10 +19,47 @@
 
 .global-nav {
     display: none;
-    padding: 10px;
     background-color: $gray-lighter;
     position: relative;
-    top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    #menu-handler:checked ~ & {
+        display: block;
+    }
+
+    @include media(lg) {
+        display: block;
+        background-color: transparent;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    ul {
+        margin-bottom: 10px;
+
+        @include media(lg) {
+            margin-bottom: 0;
+        }
+    }
+
+    li {
+        margin-top: 5px;
+        margin-bottom: 5px;
+
+        @include media(lg) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    a {
+        border-color: $gray;
+
+        @include media(lg) {
+
+        }
+    }
 
     &:before {
         position: absolute;
@@ -35,43 +72,9 @@
         border-color: transparent transparent $gray-lighter transparent;
         bottom: 100%;
         right: 30px;
-    }
 
-    #menu-handler:checked ~ & {
-        display: block;
-    }
-
-    ul {
-        margin-bottom: 0;
-    }
-
-    li {
-        margin-bottom: 10px;
-        padding-top: 10px;
-
-        &:not(:first-child) {
-            border-top: 1px solid $gray-light;
-        }
-    }
-
-    @include media(lg) {
-        display: block;
-        background-color: transparent;
-        padding: 0;
-
-        &:before {
+        @include media(lg) {
             display: none;
-        }
-
-        ul {
-
-        }
-
-        li {
-            margin-top: 0;
-            margin-bottom: 0;
-            border-top: 0 !important;
-            padding-top: 0;
         }
     }
 }

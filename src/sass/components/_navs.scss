@@ -1,6 +1,5 @@
 // drupal overwrites
 ul.menu li {
-    margin-left: inherit;
     list-style: none !important;
     margin-left: 0;
     padding-top: 0;
@@ -41,21 +40,20 @@ ul.menu li {
 }
 
 .global-header {
+
+    .nav-list {
+        // margin-bottom: 0;
+    }
+
     .nav-list-item {
         @include media(lg) {
-            float: left;
+            display: table-cell;
+            // float: left;
+            width: 1%;
 
             &:not(:first-child) {
-                margin-left: 10px;
-                padding-left: 12px;
-                border-left: 2px solid $header-nav-rail;
-            }
-        }
-
-        @include media(xl) {
-            &:not(:first-child) {
-                margin-left: 15px;
-                padding-left: 17px;
+                // margin-left: 25px;
+                padding-left: 20px;
             }
         }
     }
@@ -66,13 +64,31 @@ ul.menu li {
         letter-spacing: 1px;
         display: block;
         color: $brand-secondary;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid transparent;
+        white-space: nowrap;
+        transition: border-color .2s;
+        font-size: 14px;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            border-color: $brand-secondary;
+        }
+
+        &.active {
+            border-color: $brand-secondary;
+        }
 
         @include media(lg) {
-            font-size: 14px;
+            // font-size: 14px;
+            border-width: 6px;
+            text-align: center;
         }
 
         @include media(xl) {
-            font-size: 16px;
+            // font-size: 16px;
         }
     }
 }
