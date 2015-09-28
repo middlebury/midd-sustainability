@@ -21,6 +21,16 @@ ul.menu li {
     }
 }
 
+ul.inline {
+    li {
+        padding: 0;
+
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}
+
 // end overwrites
 
 .nav-list {
