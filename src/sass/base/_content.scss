@@ -214,3 +214,31 @@
         }
     }
 }
+
+.news-media {
+    background-color: $gray-lighter;
+    display: inline-block;
+    margin-bottom: 20px;
+
+    @include media(md) {
+        float: right;
+        width: 40%;
+        margin-left: 20px;
+    }
+
+    .enlarge {
+        font-size: 14px;
+        color: #949494;
+        margin-bottom: 5px;
+    }
+
+    img {
+        margin-bottom: 10px;
+    }
+
+    figcaption {
+        font-size: 14px;
+        color: #7B7B7B;
+    }
+
+}
