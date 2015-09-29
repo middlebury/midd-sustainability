@@ -77,7 +77,7 @@ gulp.task('sass', function() {
         .pipe(autoprefixer('last 2 versions'))
         .pipe(env === 'production' ? cmq() : gutil.noop())
         .pipe(env === 'production' ? minifyCss() : gutil.noop())
-        .pipe(sourcemaps.write('./'))
+        .pipe(env !== 'production' ? sourcemaps.write('./') : gutil.noop())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.reload({ stream: true }))
         .pipe(notify('Sass task complete'));
@@ -90,7 +90,7 @@ gulp.task('js', function() {
         }))
         .pipe(sourcemaps.init())
         .pipe(env === 'production' ? uglify() : gutil.noop())
-        .pipe(sourcemaps.write('./'))
+        .pipe(env !== 'production' ? sourcemaps.write('./') : gutil.noop())
         .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.reload({ stream: true }))
         .pipe(notify('Javascript task complete'));
