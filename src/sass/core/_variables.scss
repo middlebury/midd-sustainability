@@ -28,13 +28,13 @@ $base-line-height: 1.4;
 
 // Colors
 
-$brand-primary: #00255C;
+$brand-primary: #00255c;
 $brand-primary-dark: darken($brand-primary, 25%);
 $brand-primary-light: #4d78ad;
 $brand-primary-lighter: #32537e;
 $brand-primary-lightest: #c6d3e6;
 
-$brand-secondary: #ce4c00;
+$brand-secondary: #e25200;
 $brand-secondary-dark: darken($brand-secondary, 10%);
 
 $gray-base: #000;
@@ -54,7 +54,7 @@ $header-nav-rail: $brand-primary-lightest;
 
 $body-bg: $white;
 
-$content-color: #606E7D;
+$content-color: #606e7d;
 
 $link-color: $brand-secondary;
 $link-color-hover: $brand-secondary-dark;
