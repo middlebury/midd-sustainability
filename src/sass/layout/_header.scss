@@ -57,6 +57,7 @@ $wordmark-spacing: 12px;
     font-family: $font-family-serif;
     font-size: 28px;
     font-weight: normal;
+    margin-top: 5px;
     margin-bottom: 20px;
 
     @include media(sm) {
