@@ -18,6 +18,16 @@ $slide-breakpoint: 'xl';
         border-radius: 10px;
     }
 
+    svg {
+        opacity: .75;
+        transition: opacity .2s;
+    }
+
+    &:hover {
+        svg {
+            opacity: 1;
+        }
+    }
 }
 
 .cycle-next {
