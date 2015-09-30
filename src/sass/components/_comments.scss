@@ -1,3 +1,13 @@
+// this class shows up on listing pages, so it's not necessarily part of the comments component
+// TODO: move .comment-comments somewhere more appropriate
+.comment-comments {
+    float: right;
+
+    a {
+        color: $gray;
+    }
+}
+
 .comments {
     margin-top: 50px;
     margin-bottom: 20px;
