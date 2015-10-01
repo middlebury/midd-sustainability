@@ -25,7 +25,7 @@
     margin-bottom: 20px;
     padding: 10px;
 
-    #menu-handler:checked ~ & {
+    &.menu-open {
         display: block;
     }
 
