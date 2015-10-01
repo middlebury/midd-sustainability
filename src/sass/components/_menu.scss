@@ -9,6 +9,11 @@
     margin-bottom: 20px;
     font-weight: normal;
 
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
     @include media(lg) {
         display: none;
     }
