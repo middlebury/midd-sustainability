@@ -5,6 +5,10 @@ $slide-breakpoint: 'xl';
     // margin-bottom: 50px;
 }
 
+.cycle-slide {
+    width: 100%; // this is needed since Firefox ignores img { max-width: 100%; } if the container doesn't have a set width
+}
+
 .cycle-next,
 .cycle-prev {
     background-color: $white;
