@@ -108,6 +108,7 @@ ul.inline {
 
     .nav-list-item {
         margin-bottom: 10px;
+        @include clearfix();
 
         body:not(.midd_sustainability_inside) & {
 
